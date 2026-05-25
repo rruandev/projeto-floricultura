@@ -81,7 +81,7 @@ revealEls.forEach(el => revealObserver.observe(el));
 /* =====================
    MONTADOR DE BUQUÊ
    ===================== */
-const WHATSAPP_NUMBER = '5511999999999'; // ← substitua pelo número real
+const WHATSAPP_NUMBER = '556184293798';
 
 let currentStep = 1;
 const TOTAL_STEPS = 4;

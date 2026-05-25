@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Beatriz Floricultura — Flores com amor e cuidado para cada momento especial da sua vida">
+    <title>Beatriz Floricultura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Cursor personalizado -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Botão flutuante WhatsApp -->
+    <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido%20na%20Beatriz%20Floricultura%20%F0%9F%8C%B8"
+       class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+        💬
+    </a>
+
+    <!-- Navegação -->
+    <nav class="nav" id="nav">
+        <div class="nav__container">
+            <a href="#inicio" class="nav__logo">
+                <span class="nav__logo-icon">✿</span>
+                <span class="nav__logo-text">Beatriz Floricultura</span>
+            </a>
+            <ul class="nav__links">
+                <li><a href="#ocasioes">Ocasiões</a></li>
+                <li><a href="#monte-seu-buque">Monte seu Buquê</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#entrega">Entrega</a></li>
+                <li>
+                    <a href="https://wa.me/5511999999999" class="nav__cta" target="_blank">
+                        Fale Conosco
+                    </a>
+                </li>
+            </ul>
+            <button class="nav__menu-btn" id="menuBtn" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="nav__mobile" id="mobileMenu">
+            <ul>
+                <li><a href="#ocasioes">Ocasiões</a></li>
+                <li><a href="#monte-seu-buque">Monte seu Buquê</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#entrega">Entrega</a></li>
+                <li><a href="https://wa.me/5511999999999" target="_blank">💬 Fale Conosco</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+        <div class="hero__petals" id="petals"></div>
+        <div class="hero__content">
+            <p class="hero__eyebrow">Bem-vinda à</p>
+            <h1 class="hero__title">Beatriz<br><em>Floricultura</em></h1>
+            <p class="hero__subtitle">Flores que falam o que as palavras não conseguem</p>
+            <div class="hero__actions">
+                <a href="#monte-seu-buque" class="btn btn--primary">🌸 Monte seu Buquê</a>
+                <a href="#ocasioes" class="btn btn--outline">Ver Ocasiões</a>
+            </div>
+        </div>
+        <div class="hero__scroll">
+            <span>Rolar</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section class="diferenciais" id="diferenciais">
+        <div class="container">
+            <div class="diferenciais__grid">
+                <div class="diferencial-card reveal">
+                    <div class="diferencial-card__icon">🌸</div>
+                    <h3>Frescor Garantido</h3>
+                    <p>Flores selecionadas com carinho e entregues no mesmo dia para manter a beleza por mais tempo.</p>
+                </div>
+                <div class="diferencial-card reveal">
+                    <div class="diferencial-card__icon">💝</div>
+                    <h3>Montagem Personalizada</h3>
+                    <p>Cada arranjo é único. Monte seu buquê passo a passo e nossa equipe cria especialmente pra você.</p>
+                </div>
+                <div class="diferencial-card reveal">
+                    <div class="diferencial-card__icon">🚚</div>
+                    <h3>Entrega com Cuidado</h3>
+                    <p>Embalagem especial que protege e embeleza cada flor até chegar no destino com perfeição.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ocasiões -->
+    <section class="ocasioes" id="ocasioes">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Para cada momento</span>
+                <h2 class="section-title">Qual a Ocasião?</h2>
+                <p class="section-desc">Encontre o arranjo perfeito para cada momento especial da sua vida</p>
+            </div>
+            <div class="ocasioes__grid">
+                <div class="ocasiao-card reveal" style="--card-color: #F4A5A5; --card-color-dark: #C97B7B;">
+                    <span class="ocasiao-card__icon">💕</span>
+                    <h3>Dia dos Namorados</h3>
+                    <p>Rosas, lírios e arranjos românticos para declarar seu amor do jeito mais bonito</p>
+                    <a href="#monte-seu-buque" class="ocasiao-card__link">Escolher flores →</a>
+                </div>
+                <div class="ocasiao-card reveal" style="--card-color: #A5C4F4; --card-color-dark: #5E8EC4;">
+                    <span class="ocasiao-card__icon">🎂</span>
+                    <h3>Aniversários</h3>
+                    <p>Buquês coloridos e alegres para celebrar cada ano com muito estilo e carinho</p>
+                    <a href="#monte-seu-buque" class="ocasiao-card__link">Escolher flores →</a>
+                </div>
+                <div class="ocasiao-card reveal" style="--card-color: #F4D5A5; --card-color-dark: #C4965E;">
+                    <span class="ocasiao-card__icon">💒</span>
+                    <h3>Casamentos</h3>
+                    <p>Decoração floral completa, buquê de noiva e arranjos para o grande dia</p>
+                    <a href="#monte-seu-buque" class="ocasiao-card__link">Escolher flores →</a>
+                </div>
+                <div class="ocasiao-card reveal" style="--card-color: #C4F4A5; --card-color-dark: #72B04E;">
+                    <span class="ocasiao-card__icon">👩</span>
+                    <h3>Dia das Mães</h3>
+                    <p>Homenageie com flores que expressam todo amor e gratidão que você sente</p>
+                    <a href="#monte-seu-buque" class="ocasiao-card__link">Escolher flores →</a>
+                </div>
+                <div class="ocasiao-card reveal" style="--card-color: #D5A5F4; --card-color-dark: #9660C4;">
+                    <span class="ocasiao-card__icon">🏢</span>
+                    <h3>Corporativo</h3>
+                    <p>Arranjos elegantes para escritórios, eventos e presentes empresariais</p>
+                    <a href="#monte-seu-buque" class="ocasiao-card__link">Escolher flores →</a>
+                </div>
+                <div class="ocasiao-card reveal" style="--card-color: #F4A5D5; --card-color-dark: #C46090;">
+                    <span class="ocasiao-card__icon">🌷</span>
+                    <h3>Dia a Dia</h3>
+                    <p>Flores para alegrar sua casa, seu trabalho ou simplesmente o dia de alguém</p>
+                    <a href="#monte-seu-buque" class="ocasiao-card__link">Escolher flores →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Monte seu Buquê -->
+    <section class="builder" id="monte-seu-buque">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Experiência única</span>
+                <h2 class="section-title">Monte seu Buquê</h2>
+                <p class="section-desc">Escolha passo a passo e receba um orçamento personalizado pelo WhatsApp</p>
+            </div>
+
+            <div class="builder__wrapper reveal">
+                <!-- Barra de progresso -->
+                <div class="builder__progress">
+                    <div class="builder__progress-track">
+                        <div class="builder__progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="builder__steps-indicator">
+                        <div class="step-dot active" data-step="1"><span>1</span></div>
+                        <div class="step-dot" data-step="2"><span>2</span></div>
+                        <div class="step-dot" data-step="3"><span>3</span></div>
+                        <div class="step-dot" data-step="4"><span>4</span></div>
+                    </div>
+                    <div class="builder__steps-labels">
+                        <span>Ocasião</span>
+                        <span>Flores</span>
+                        <span>Cores</span>
+                        <span>Embalagem</span>
+                    </div>
+                </div>
+
+                <!-- Etapa 1: Ocasião -->
+                <div class="builder__step active" data-step="1">
+                    <h3 class="builder__step-title">Para qual ocasião? 🎉</h3>
+                    <div class="builder__options">
+                        <div class="builder__option" data-value="Aniversário">
+                            <span class="option-emoji">🎂</span>
+                            <span>Aniversário</span>
+                        </div>
+                        <div class="builder__option" data-value="Namoro / Paixão">
+                            <span class="option-emoji">💕</span>
+                            <span>Namoro / Paixão</span>
+                        </div>
+                        <div class="builder__option" data-value="Casamento">
+                            <span class="option-emoji">💒</span>
+                            <span>Casamento</span>
+                        </div>
+                        <div class="builder__option" data-value="Dia das Mães">
+                            <span class="option-emoji">👩</span>
+                            <span>Dia das Mães</span>
+                        </div>
+                        <div class="builder__option" data-value="Corporativo">
+                            <span class="option-emoji">🏢</span>
+                            <span>Corporativo</span>
+                        </div>
+                        <div class="builder__option" data-value="Sem ocasião especial">
+                            <span class="option-emoji">🌸</span>
+                            <span>Dia a Dia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Etapa 2: Flores -->
+                <div class="builder__step" data-step="2">
+                    <h3 class="builder__step-title">Quais flores você ama? 🌺</h3>
+                    <p class="builder__step-hint">Pode escolher mais de uma!</p>
+                    <div class="builder__options">
+                        <div class="builder__option" data-value="Rosas" data-multi="true">
+                            <span class="option-emoji">🌹</span>
+                            <span>Rosas</span>
+                        </div>
+                        <div class="builder__option" data-value="Lírios" data-multi="true">
+                            <span class="option-emoji">🌸</span>
+                            <span>Lírios</span>
+                        </div>
+                        <div class="builder__option" data-value="Girassóis" data-multi="true">
+                            <span class="option-emoji">🌻</span>
+                            <span>Girassóis</span>
+                        </div>
+                        <div class="builder__option" data-value="Orquídeas" data-multi="true">
+                            <span class="option-emoji">🌺</span>
+                            <span>Orquídeas</span>
+                        </div>
+                        <div class="builder__option" data-value="Tulipas" data-multi="true">
+                            <span class="option-emoji">🌷</span>
+                            <span>Tulipas</span>
+                        </div>
+                        <div class="builder__option" data-value="Gérberas" data-multi="true">
+                            <span class="option-emoji">🌼</span>
+                            <span>Gérberas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Etapa 3: Cores -->
+                <div class="builder__step" data-step="3">
+                    <h3 class="builder__step-title">Qual paleta de cores? 🎨</h3>
+                    <div class="builder__options builder__options--colors">
+                        <div class="builder__option" data-value="Tons de Rosa e Vermelho">
+                            <div class="color-palette">
+                                <span style="background:#FF6B8A;"></span>
+                                <span style="background:#FF4757;"></span>
+                                <span style="background:#FFA0B4;"></span>
+                            </div>
+                            <span>Rosa &amp; Vermelho</span>
+                        </div>
+                        <div class="builder__option" data-value="Branco e Verde Natural">
+                            <div class="color-palette">
+                                <span style="background:#F8F8F8; border: 1px solid #eee;"></span>
+                                <span style="background:#7BAE7F;"></span>
+                                <span style="background:#C8E6C9;"></span>
+                            </div>
+                            <span>Branco &amp; Verde</span>
+                        </div>
+                        <div class="builder__option" data-value="Roxo e Lilás">
+                            <div class="color-palette">
+                                <span style="background:#9B59B6;"></span>
+                                <span style="background:#C8A2C8;"></span>
+                                <span style="background:#DDA0DD;"></span>
+                            </div>
+                            <span>Roxo &amp; Lilás</span>
+                        </div>
+                        <div class="builder__option" data-value="Cores Vibrantes e Alegres">
+                            <div class="color-palette">
+                                <span style="background:#FF6B6B;"></span>
+                                <span style="background:#FFE66D;"></span>
+                                <span style="background:#4ECDC4;"></span>
+                            </div>
+                            <span>Cores Vibrantes</span>
+                        </div>
+                        <div class="builder__option" data-value="Tons Neutros e Nude">
+                            <div class="color-palette">
+                                <span style="background:#E8D5C4;"></span>
+                                <span style="background:#C4A882;"></span>
+                                <span style="background:#F5EDE0;"></span>
+                            </div>
+                            <span>Neutros &amp; Nude</span>
+                        </div>
+                        <div class="builder__option" data-value="Laranja e Amarelo Solar">
+                            <div class="color-palette">
+                                <span style="background:#FF7F50;"></span>
+                                <span style="background:#FFD700;"></span>
+                                <span style="background:#FFA07A;"></span>
+                            </div>
+                            <span>Laranja &amp; Amarelo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Etapa 4: Embalagem -->
+                <div class="builder__step" data-step="4">
+                    <h3 class="builder__step-title">Como deseja a embalagem? 🎁</h3>
+                    <div class="builder__options">
+                        <div class="builder__option" data-value="Buquê com Papel Kraft">
+                            <span class="option-emoji">📦</span>
+                            <span>Papel Kraft</span>
+                            <small>Rústico e charmoso</small>
+                        </div>
+                        <div class="builder__option" data-value="Buquê com Papel Celofane">
+                            <span class="option-emoji">✨</span>
+                            <span>Papel Celofane</span>
+                            <small>Clássico e elegante</small>
+                        </div>
+                        <div class="builder__option" data-value="Caixa de Flores Premium">
+                            <span class="option-emoji">🎁</span>
+                            <span>Caixa Premium</span>
+                            <small>Sofisticado e especial</small>
+                        </div>
+                        <div class="builder__option" data-value="Arranjo em Vaso">
+                            <span class="option-emoji">🏺</span>
+                            <span>Arranjo em Vaso</span>
+                            <small>Dura mais tempo</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resumo final -->
+                <div class="builder__step" data-step="5">
+                    <div class="builder__summary" id="builderSummary"></div>
+                </div>
+
+                <!-- Navegação -->
+                <div class="builder__nav">
+                    <button class="btn btn--outline" id="prevBtn" style="display:none">← Voltar</button>
+                    <div class="builder__nav-right">
+                        <button class="btn btn--primary" id="nextBtn">Próximo →</button>
+                        <a href="#" class="btn btn--whatsapp" id="whatsappBtn" style="display:none" target="_blank">
+                            💬 Enviar pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria -->
+    <section class="galeria" id="galeria">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Nossa arte floral</span>
+                <h2 class="section-title">Galeria</h2>
+                <p class="section-desc">Uma amostra do nosso trabalho feito com amor e dedicação</p>
+            </div>
+            <div class="galeria__grid">
+                <div class="galeria__item galeria__item--large reveal" style="--g1:#F4A5A5;--g2:#C97B9E;">
+                    <div class="galeria__bg"></div>
+                    <div class="galeria__flower">🌹</div>
+                    <div class="galeria__overlay">
+                        <span>Buquê Romântico</span>
+                        <small>Rosas &amp; Lírios</small>
+                    </div>
+                </div>
+                <div class="galeria__item reveal" style="--g1:#A5D5F4;--g2:#7BAAC9;">
+                    <div class="galeria__bg"></div>
+                    <div class="galeria__flower">💐</div>
+                    <div class="galeria__overlay">
+                        <span>Arranjo Azul</span>
+                        <small>Flores do campo</small>
+                    </div>
+                </div>
+                <div class="galeria__item reveal" style="--g1:#F4F0A5;--g2:#C4A84E;">
+                    <div class="galeria__bg"></div>
+                    <div class="galeria__flower">🌻</div>
+                    <div class="galeria__overlay">
+                        <span>Girassóis</span>
+                        <small>Alegria no dia a dia</small>
+                    </div>
+                </div>
+                <div class="galeria__item galeria__item--tall reveal" style="--g1:#D5A5F4;--g2:#9660C4;">
+                    <div class="galeria__bg"></div>
+                    <div class="galeria__flower">🌺</div>
+                    <div class="galeria__overlay">
+                        <span>Orquídeas</span>
+                        <small>Sofisticação pura</small>
+                    </div>
+                </div>
+                <div class="galeria__item reveal" style="--g1:#A5F4C0;--g2:#4EC472;">
+                    <div class="galeria__bg"></div>
+                    <div class="galeria__flower">🌿</div>
+                    <div class="galeria__overlay">
+                        <span>Arranjo Natural</span>
+                        <small>Verde e vida</small>
+                    </div>
+                </div>
+                <div class="galeria__item reveal" style="--g1:#F4C5A5;--g2:#C49060;">
+                    <div class="galeria__bg"></div>
+                    <div class="galeria__flower">🎁</div>
+                    <div class="galeria__overlay">
+                        <span>Caixa Premium</span>
+                        <small>Presente perfeito</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Entrega -->
+    <section class="entrega" id="entrega">
+        <div class="container">
+            <div class="entrega__inner reveal">
+                <div class="entrega__content">
+                    <span class="section-tag">Receba em casa</span>
+                    <h2 class="section-title">Entregamos com Carinho</h2>
+                    <p>Fazemos entregas em toda a cidade com embalagem especial para preservar a beleza das flores até o destino.</p>
+                    <ul class="entrega__features">
+                        <li>✅ Entrega no mesmo dia (pedidos até 16h)</li>
+                        <li>✅ Embalagem especial para preservar as flores</li>
+                        <li>✅ Acompanhamento do pedido pelo WhatsApp</li>
+                        <li>✅ Cartão de mensagem personalizado grátis</li>
+                    </ul>
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido%20na%20Beatriz%20Floricultura%20%F0%9F%8C%B8"
+                       class="btn btn--primary btn--large" target="_blank">
+                        💬 Fazer Pedido pelo WhatsApp
+                    </a>
+                </div>
+                <div class="entrega__info">
+                    <div class="info-card">
+                        <div class="info-card__icon">🕐</div>
+                        <div>
+                            <h4>Horário</h4>
+                            <p>Segunda a Sábado<br>8h às 20h</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card__icon">📍</div>
+                        <div>
+                            <h4>Localização</h4>
+                            <p>Atendemos toda<br>a região</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card__icon">⚡</div>
+                        <div>
+                            <h4>Resposta rápida</h4>
+                            <p>Em até 10 minutos<br>no WhatsApp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <a href="#inicio" class="nav__logo" style="margin-bottom:1rem; display:flex;">
+                        <span class="nav__logo-icon">✿</span>
+                        <span class="nav__logo-text" style="color:white;">Beatriz Floricultura</span>
+                    </a>
+                    <p>Flores que falam o que as palavras não conseguem. Com amor e cuidado em cada arranjo.</p>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="WhatsApp">💬</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#ocasioes">Ocasiões</a></li>
+                        <li><a href="#monte-seu-buque">Monte seu Buquê</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                        <li><a href="#entrega">Entrega</a></li>
+                    </ul>
+                </div>
+                <div class="footer__contact">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li>📱 (11) 99999-9999</li>
+                        <li>📧 contato@beatrizfloricultura.com</li>
+                        <li>🕐 Seg–Sáb: 8h às 20h</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2026 Beatriz Floricultura · Feito com 🌸 e muito carinho</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

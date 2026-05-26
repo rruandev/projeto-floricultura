@@ -393,40 +393,79 @@ img  { max-width: 100%; display: block; }
 }
 
 .ocasiao-card {
-    padding: 2rem; border-radius: var(--radius-md);
+    border-radius: var(--radius-md);
     background: var(--color-white);
     border: 1px solid rgba(201,132,122,.12);
     transition: var(--transition);
     position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
 }
+.ocasiao-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Foto no topo do card */
+.ocasiao-card__photo {
+    height: 190px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+}
+.ocasiao-card__photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform .6s var(--ease);
+}
+.ocasiao-card:hover .ocasiao-card__photo img { transform: scale(1.08); }
+
+/* Gradiente colorido na base da foto */
+.ocasiao-card__photo::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 60px;
+    background: linear-gradient(to top, rgba(255,255,255,.95), transparent);
+}
+
+/* Badge emoji no canto da foto */
+.ocasiao-card__photo-badge {
+    position: absolute; top: .75rem; right: .75rem; z-index: 2;
+    width: 38px; height: 38px;
+    background: rgba(255,255,255,.9);
+    backdrop-filter: blur(4px);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Faixa colorida no topo do card */
 .ocasiao-card::before {
     content: '';
     position: absolute; top: 0; left: 0; right: 0;
-    height: 4px;
+    height: 3px; z-index: 3;
     background: linear-gradient(to right, var(--card-color), var(--card-color-dark));
-    transition: height .5s var(--ease), opacity .5s var(--ease);
-    opacity: 1;
 }
-.ocasiao-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-}
-.ocasiao-card:hover::before { height: 100%; opacity: .07; }
 
-.ocasiao-card__icon { font-size: 2.25rem; margin-bottom: 1rem; display: block; }
-.ocasiao-card h3 {
-    font-family: var(--font-display); font-size: 1.35rem;
-    margin-bottom: .5rem; color: var(--color-text);
+/* Conteúdo texto */
+.ocasiao-card__body {
+    padding: 1.4rem 1.75rem 1.75rem;
+    display: flex; flex-direction: column; flex: 1;
 }
-.ocasiao-card p {
-    color: var(--color-text-light); font-size: .9rem;
-    line-height: 1.6; margin-bottom: 1.25rem;
+.ocasiao-card__body h3 {
+    font-family: var(--font-display); font-size: 1.3rem;
+    margin-bottom: .45rem; color: var(--color-text);
+}
+.ocasiao-card__body p {
+    color: var(--color-text-light); font-size: .88rem;
+    line-height: 1.6; margin-bottom: 1.1rem; flex: 1;
 }
 .ocasiao-card__link {
-    font-size: .9rem; font-weight: 500;
+    font-size: .88rem; font-weight: 500;
     color: var(--color-primary); transition: var(--transition);
+    align-self: flex-start;
 }
-.ocasiao-card__link:hover { letter-spacing: .02em; }
+.ocasiao-card__link:hover { letter-spacing: .03em; }
 
 /* =====================
    MONTADOR DE BUQUÊ

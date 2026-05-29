@@ -861,3 +861,116 @@ img  { max-width: 100%; display: block; }
 
 /* Footer social SVGs */
 .footer__social a svg { display: block; }
+
+/* ── HERO urgência + preço âncora ───────── */
+.hero__urgencia {
+  display: inline-block;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.25);
+  color: rgba(255,255,255,.9);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: .06em;
+  padding: 7px 18px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+.hero__preco-ancora {
+  margin-top: 20px;
+  font-size: 14px;
+  color: rgba(255,255,255,.55);
+  font-weight: 300;
+}
+.hero__preco-ancora strong { color: rgba(255,255,255,.85); font-weight: 500; }
+
+/* ── CTA PÓS-GALERIA ────────────────────── */
+.galeria-cta { background: #f9f1ee; padding: 56px 0; }
+.galeria-cta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.galeria-cta__titulo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #3d2c2a;
+  margin-bottom: 8px;
+}
+.galeria-cta__sub {
+  font-size: 15px;
+  color: #8a7270;
+  font-weight: 300;
+  line-height: 1.7;
+  max-width: 460px;
+}
+@media(max-width:700px) {
+  .galeria-cta__inner { flex-direction: column; align-items: flex-start; }
+}
+
+/* ── SOBRE ──────────────────────────────── */
+.sobre { padding: 100px 0; background: #fff; }
+.sobre__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+@media(max-width:900px) {
+  .sobre__grid { grid-template-columns: 1fr; gap: 48px; }
+}
+.sobre__foto {
+  aspect-ratio: 3/4;
+  background: linear-gradient(145deg, #d4b8b0, #b8928a);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+}
+.sobre__foto img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.sobre__foto-ph { text-align: center; }
+.sobre__foto-ph p { font-size: 12px; color: rgba(255,255,255,.35); letter-spacing: .1em; margin-top: 10px; }
+.sobre__conteudo p {
+  font-size: 15px;
+  color: #7a6461;
+  line-height: 1.85;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+
+/* ── STICKY MOBILE BAR ──────────────────── */
+.sticky-mobile {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 400;
+  background: #3d2c2a;
+  padding: 12px 20px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transform: translateY(100%);
+  transition: transform .4s cubic-bezier(.16,1,.3,1);
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.sticky-mobile.show { transform: translateY(0); }
+@media(max-width:900px) { .sticky-mobile { display: flex; } }
+.sticky-mobile__text strong { display: block; font-size: 14px; color: #fff; font-weight: 500; }
+.sticky-mobile__text span { font-size: 12px; color: rgba(255,255,255,.5); }
+.sticky-mobile__btn {
+  flex-shrink: 0;
+  background: #C9847A;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 22px;
+  border-radius: 50px;
+  white-space: nowrap;
+  transition: background .2s;
+}
+.sticky-mobile__btn:hover { background: #b5706a; }

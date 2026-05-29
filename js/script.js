@@ -256,3 +256,11 @@ function toggleFf(id) {
   document.querySelectorAll('.faq-flores__item.open').forEach(x => x.classList.remove('open'));
   if (!isOpen) el.classList.add('open');
 }
+
+// ── Sticky bar mobile
+const stickyMobile = document.getElementById('stickyMobile');
+if (stickyMobile) {
+  window.addEventListener('scroll', () => {
+    stickyMobile.classList.toggle('show', window.scrollY > 500);
+  }, { passive: true });
+}

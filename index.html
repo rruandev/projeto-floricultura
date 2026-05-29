@@ -79,6 +79,15 @@
     <!-- Barra de progresso -->
     <div id="scroll-progress" style="position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,#C9847A,#e8b4af);z-index:9999;transition:width .1s linear;"></div>
 
+    <!-- Sticky bar mobile -->
+    <div class="sticky-mobile" id="stickyMobile">
+        <div class="sticky-mobile__text">
+            <strong>Beatriz Floricultura</strong>
+            <span>Pedidos até 16h entregues hoje</span>
+        </div>
+        <a href="https://wa.me/556184293798?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido." target="_blank" class="sticky-mobile__btn">Pedir agora</a>
+    </div>
+
     <!-- Cursor personalizado -->
     <div class="cursor" id="cursor"></div>
     <div class="cursor-follower" id="cursorFollower"></div>
@@ -101,6 +110,7 @@
                 <li><a href="#monte-seu-buque">Monte seu Buquê</a></li>
                 <li><a href="#galeria">Galeria</a></li>
                 <li><a href="#entrega">Entrega</a></li>
+                <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#depoimentos">Clientes</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li>
@@ -119,6 +129,7 @@
                 <li><a href="#monte-seu-buque">Monte seu Buquê</a></li>
                 <li><a href="#galeria">Galeria</a></li>
                 <li><a href="#entrega">Entrega</a></li>
+                <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#depoimentos">Clientes</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="https://wa.me/556184293798" target="_blank">Fale Conosco</a></li>
@@ -130,6 +141,7 @@
     <section class="hero" id="inicio">
         <div class="hero__petals" id="petals"></div>
         <div class="hero__content">
+            <div class="hero__urgencia">Pedidos até as 16h entregues hoje em Taguatinga</div>
             <p class="hero__eyebrow">Bem-vinda à</p>
             <h1 class="hero__title">Beatriz<br><em>Floricultura</em></h1>
             <p class="hero__subtitle">Flores que falam o que as palavras não conseguem</p>
@@ -137,6 +149,7 @@
                 <a href="#monte-seu-buque" class="btn btn--primary">Monte seu Buquê</a>
                 <a href="#ocasioes" class="btn btn--outline">Ver Ocasiões</a>
             </div>
+            <div class="hero__preco-ancora">Buquês a partir de <strong>R$ 80</strong> · Entrega inclusa</div>
         </div>
         <div class="hero__scroll">
             <span>Rolar</span>
@@ -184,7 +197,7 @@
                     <div class="ocasiao-card__body">
                         <h3>Dia dos Namorados</h3>
                         <p>Rosas, lírios e arranjos românticos para declarar seu amor do jeito mais bonito</p>
-                        <a href="#monte-seu-buque" class="ocasiao-card__link">Escolher flores →</a>
+                        <a href="#monte-seu-buque" class="ocasiao-card__link">Escolher →</a>
                     </div>
                 </div>
                 <div class="ocasiao-card reveal" style="--card-color: #A5C4F4; --card-color-dark: #5E8EC4;">
@@ -195,7 +208,7 @@
                     <div class="ocasiao-card__body">
                         <h3>Aniversários</h3>
                         <p>Buquês coloridos e alegres para celebrar cada ano com muito estilo e carinho</p>
-                        <a href="#monte-seu-buque" class="ocasiao-card__link">Escolher flores →</a>
+                        <a href="#monte-seu-buque" class="ocasiao-card__link">Escolher →</a>
                     </div>
                 </div>
                 <div class="ocasiao-card reveal" style="--card-color: #F4D5A5; --card-color-dark: #C4965E;">
@@ -206,7 +219,7 @@
                     <div class="ocasiao-card__body">
                         <h3>Casamentos</h3>
                         <p>Decoração floral completa, buquê de noiva e arranjos para o grande dia</p>
-                        <a href="#monte-seu-buque" class="ocasiao-card__link">Escolher flores →</a>
+                        <a href="#monte-seu-buque" class="ocasiao-card__link">Escolher →</a>
                     </div>
                 </div>
                 <div class="ocasiao-card reveal" style="--card-color: #C4F4A5; --card-color-dark: #72B04E;">
@@ -217,7 +230,7 @@
                     <div class="ocasiao-card__body">
                         <h3>Dia das Mães</h3>
                         <p>Homenageie com flores que expressam todo amor e gratidão que você sente</p>
-                        <a href="#monte-seu-buque" class="ocasiao-card__link">Escolher flores →</a>
+                        <a href="#monte-seu-buque" class="ocasiao-card__link">Escolher →</a>
                     </div>
                 </div>
                 <div class="ocasiao-card reveal" style="--card-color: #D5A5F4; --card-color-dark: #9660C4;">
@@ -228,7 +241,7 @@
                     <div class="ocasiao-card__body">
                         <h3>Corporativo</h3>
                         <p>Arranjos elegantes para escritórios, eventos e presentes empresariais</p>
-                        <a href="#monte-seu-buque" class="ocasiao-card__link">Escolher flores →</a>
+                        <a href="#monte-seu-buque" class="ocasiao-card__link">Escolher →</a>
                     </div>
                 </div>
                 <div class="ocasiao-card reveal" style="--card-color: #F4A5D5; --card-color-dark: #C46090;">
@@ -239,7 +252,7 @@
                     <div class="ocasiao-card__body">
                         <h3>Dia a Dia</h3>
                         <p>Flores para alegrar sua casa, seu trabalho ou simplesmente o dia de alguém</p>
-                        <a href="#monte-seu-buque" class="ocasiao-card__link">Escolher flores →</a>
+                        <a href="#monte-seu-buque" class="ocasiao-card__link">Escolher →</a>
                     </div>
                 </div>
             </div>
@@ -494,6 +507,19 @@
         </div>
     </section>
 
+    <!-- CTA pós-galeria -->
+    <div class="galeria-cta">
+        <div class="container">
+            <div class="galeria-cta__inner">
+                <div class="galeria-cta__text">
+                    <p class="galeria-cta__titulo">Gostou do que viu?</p>
+                    <p class="galeria-cta__sub">Cada arranjo é criado especialmente para o seu momento. Me conta o que você precisa e a gente cria juntas.</p>
+                </div>
+                <a href="https://wa.me/556184293798?text=Olá!%20Vi%20a%20galeria%20no%20site%20e%20gostaria%20de%20pedir%20um%20arranjo%20personalizado." target="_blank" class="btn btn--primary">Pedir meu arranjo</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Entrega -->
     <section class="entrega" id="entrega">
         <div class="container">
@@ -535,6 +561,28 @@
                             <p>Em até 10 minutos<br>no WhatsApp</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <div class="sobre__grid">
+                <div class="sobre__foto reveal">
+                    <!-- Substitua pelo caminho da sua foto: <img src="images/beatriz.jpg" alt="Beatriz" /> -->
+                    <div class="sobre__foto-ph">
+                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" opacity=".25"><circle cx="28" cy="20" r="11" stroke="white" stroke-width="1"/><path d="M6 50c0-12.15 9.85-22 22-22s22 9.85 22 22" stroke="white" stroke-width="1"/></svg>
+                        <p>Adicione sua foto</p>
+                    </div>
+                </div>
+                <div class="sobre__conteudo reveal">
+                    <span class="section-tag">Quem faz tudo isso</span>
+                    <h2 class="section-title">Oi, eu sou a <em>Beatriz</em></h2>
+                    <p>Trabalho com flores porque acredito que elas têm o poder de transformar um momento comum em algo que a pessoa não esquece. Cada buquê que eu entrego tem um pedaço do meu cuidado — na escolha, na montagem e na embalagem.</p>
+                    <p>Sou de Taguatinga e atendo toda a região de Brasília. Se você quer algo especial, me chama. A gente conversa e cria juntas o arranjo perfeito para o seu momento.</p>
+                    <a href="https://wa.me/556184293798?text=Olá%20Beatriz!%20Quero%20fazer%20um%20pedido%20especial." target="_blank" class="btn btn--primary" style="margin-top:28px;display:inline-flex;">Falar com a Beatriz</a>
                 </div>
             </div>
         </div>

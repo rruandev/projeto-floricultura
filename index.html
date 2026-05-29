@@ -3,8 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Beatriz Floricultura — Flores com amor e cuidado para cada momento especial da sua vida">
-    <title>Beatriz Floricultura</title>
+    <meta name="description" content="Beatriz Floricultura em Taguatinga, Brasília-DF. Buquês, arranjos e kits para todas as ocasiões. Entrega no mesmo dia. Peça pelo WhatsApp!">
+    <title>Beatriz Floricultura — Taguatinga, Brasília-DF</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:title"       content="Beatriz Floricultura — Taguatinga, Brasília-DF" />
+    <meta property="og:description" content="Buquês, arranjos e kits para todas as ocasiões. Entrega no mesmo dia em Taguatinga e região. Peça pelo WhatsApp!" />
+    <meta property="og:image"       content="https://projeto-floricultura-sigma.vercel.app/images/buque-rosas-vermelhas.jpg" />
+    <meta property="og:url"         content="https://projeto-floricultura-sigma.vercel.app/" />
+    <meta property="og:locale"      content="pt_BR" />
+    <meta name="twitter:card"       content="summary_large_image" />
+
+    <!-- Schema LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Florist",
+      "name": "Beatriz Floricultura",
+      "description": "Buquês, arranjos e kits florais para todas as ocasiões em Taguatinga, Brasília-DF.",
+      "url": "https://projeto-floricultura-sigma.vercel.app/",
+      "telephone": "+556184293798",
+      "image": "https://projeto-floricultura-sigma.vercel.app/images/buque-rosas-vermelhas.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Taguatinga",
+        "addressRegion": "DF",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      ],
+      "areaServed": ["Taguatinga","Brasília","Ceilândia","Samambaia","Águas Claras","Riacho Fundo"],
+      "sameAs": ["https://www.instagram.com/beatriz__flores07"]
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
@@ -38,14 +76,17 @@
 </head>
 <body>
 
+    <!-- Barra de progresso -->
+    <div id="scroll-progress" style="position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,#C9847A,#e8b4af);z-index:9999;transition:width .1s linear;"></div>
+
     <!-- Cursor personalizado -->
     <div class="cursor" id="cursor"></div>
     <div class="cursor-follower" id="cursorFollower"></div>
 
     <!-- Botão flutuante WhatsApp -->
-    <a href="https://wa.me/556184293798?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido%20na%20Beatriz%20Floricultura%20%F0%9F%8C%B8"
+    <a href="https://wa.me/556184293798?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20na%20Beatriz%20Floricultura%20🌸"
        class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
-        💬
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.445h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.48-8.448zM12.045 21.785h-.005c-1.774 0-3.513-.474-5.03-1.37l-.361-.214-3.741.977.998-3.648-.235-.374a9.86 9.86 0 01-1.516-5.26c.001-5.45 4.436-9.884 9.892-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.881-9.883 9.881zm5.443-7.403c-.301-.15-1.767-.872-2.04-.971-.274-.099-.473-.148-.673.15-.198.296-.771.97-.944 1.168-.174.198-.347.223-.644.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.613.136-.135.301-.35.451-.523.146-.174.194-.298.297-.497.1-.198.05-.372-.025-.521-.075-.148-.672-1.62-.922-2.206-.242-.579-.487-.5-.672-.51-.172-.008-.371-.01-.571-.01-.198 0-.52.074-.792.372-.274.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.876 1.213 3.074.148.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.57-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
     </a>
 
     <!-- Navegação -->
@@ -60,6 +101,8 @@
                 <li><a href="#monte-seu-buque">Monte seu Buquê</a></li>
                 <li><a href="#galeria">Galeria</a></li>
                 <li><a href="#entrega">Entrega</a></li>
+                <li><a href="#depoimentos">Clientes</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li>
                     <a href="https://wa.me/556184293798" class="nav__cta" target="_blank">
                         Fale Conosco
@@ -76,6 +119,8 @@
                 <li><a href="#monte-seu-buque">Monte seu Buquê</a></li>
                 <li><a href="#galeria">Galeria</a></li>
                 <li><a href="#entrega">Entrega</a></li>
+                <li><a href="#depoimentos">Clientes</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="https://wa.me/556184293798" target="_blank">💬 Fale Conosco</a></li>
             </ul>
         </div>
@@ -480,7 +525,7 @@
                         <div class="info-card__icon">📍</div>
                         <div>
                             <h4>Localização</h4>
-                            <p>Atendemos toda<br>a região</p>
+                            <p>Taguatinga · DF<br>e região</p>
                         </div>
                     </div>
                     <div class="info-card">
@@ -491,6 +536,130 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="depoimentos" id="depoimentos">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Quem já pediu</span>
+                <h2 class="section-title">O que dizem sobre nós</h2>
+                <p class="section-desc">Cada flor entregue com amor — e cada cliente que volta sorrindo</p>
+            </div>
+            <div class="depoimentos__grid">
+                <div class="depoimento reveal">
+                    <div class="depoimento__stars">★★★★★</div>
+                    <p class="depoimento__text">"Pedi um buquê de surpresa para minha namorada e chegou lindo, bem embalado e antes do horário. Ela amou! Com certeza vou pedir de novo."</p>
+                    <div class="depoimento__autor">
+                        <div class="depoimento__avatar">G</div>
+                        <div>
+                            <strong>Gustavo M.</strong>
+                            <span>Taguatinga · DF</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento reveal">
+                    <div class="depoimento__stars">★★★★★</div>
+                    <p class="depoimento__text">"Flores lindíssimas, super frescas e a embalagem estava impecável. O cartãozinho personalizado foi um toque especial que emocionou minha mãe."</p>
+                    <div class="depoimento__autor">
+                        <div class="depoimento__avatar">A</div>
+                        <div>
+                            <strong>Amanda S.</strong>
+                            <span>Ceilândia · DF</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento reveal">
+                    <div class="depoimento__stars">★★★★★</div>
+                    <p class="depoimento__text">"Atendimento rápido pelo WhatsApp, entrega no mesmo dia e flores de um frescor incrível. Recomendo demais para quem está em Taguatinga!"</p>
+                    <div class="depoimento__autor">
+                        <div class="depoimento__avatar">C</div>
+                        <div>
+                            <strong>Carla F.</strong>
+                            <span>Águas Claras · DF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-flores" id="faq">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Dúvidas</span>
+                <h2 class="section-title">Perguntas Frequentes</h2>
+            </div>
+            <div class="faq-flores__list reveal">
+
+                <div class="faq-flores__item" id="ff1">
+                    <button onclick="toggleFf('ff1')">
+                        <span>Qual o prazo de entrega?</span>
+                        <span class="faq-flores__icon">+</span>
+                    </button>
+                    <div class="faq-flores__body">
+                        <p>Pedidos feitos até as 16h são entregues no mesmo dia. Para pedidos após esse horário, a entrega é agendada para o dia seguinte. Atendemos Taguatinga e região de Brasília-DF.</p>
+                    </div>
+                </div>
+
+                <div class="faq-flores__item" id="ff2">
+                    <button onclick="toggleFf('ff2')">
+                        <span>Quais formas de pagamento vocês aceitam?</span>
+                        <span class="faq-flores__icon">+</span>
+                    </button>
+                    <div class="faq-flores__body">
+                        <p>Aceitamos Pix, cartão de débito e crédito e dinheiro. O pagamento é combinado diretamente pelo WhatsApp no momento do pedido.</p>
+                    </div>
+                </div>
+
+                <div class="faq-flores__item" id="ff3">
+                    <button onclick="toggleFf('ff3')">
+                        <span>Posso pedir um buquê personalizado?</span>
+                        <span class="faq-flores__icon">+</span>
+                    </button>
+                    <div class="faq-flores__body">
+                        <p>Sim! Use o nosso "Monte seu Buquê" aqui no site e receba um orçamento personalizado direto no WhatsApp. Ou se preferir, manda uma mensagem descrevendo o que você quer — a gente cria especialmente pra você.</p>
+                    </div>
+                </div>
+
+                <div class="faq-flores__item" id="ff4">
+                    <button onclick="toggleFf('ff4')">
+                        <span>As flores chegam frescas?</span>
+                        <span class="faq-flores__icon">+</span>
+                    </button>
+                    <div class="faq-flores__body">
+                        <p>Sempre! Trabalhamos com flores selecionadas e entregues com embalagem especial para preservar o frescor e a beleza até o destino. Em média, as flores duram de 5 a 10 dias após a entrega com os cuidados corretos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-flores__item" id="ff5">
+                    <button onclick="toggleFf('ff5')">
+                        <span>Fazem entrega em qual região?</span>
+                        <span class="faq-flores__icon">+</span>
+                    </button>
+                    <div class="faq-flores__body">
+                        <p>Entregamos em Taguatinga, Ceilândia, Samambaia, Águas Claras, Riacho Fundo e outras regiões de Brasília-DF. Manda uma mensagem no WhatsApp para confirmar a disponibilidade no seu endereço.</p>
+                    </div>
+                </div>
+
+                <div class="faq-flores__item" id="ff6">
+                    <button onclick="toggleFf('ff6')">
+                        <span>Posso incluir chocolates ou presente junto com as flores?</span>
+                        <span class="faq-flores__icon">+</span>
+                    </button>
+                    <div class="faq-flores__body">
+                        <p>Sim! Temos opções de kits com Ferrero Rocher, ursinhos e outros mimos. Veja nossa galeria ou pergunte pelo WhatsApp o que temos disponível no momento.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div style="text-align:center;margin-top:40px;">
+                <a href="https://wa.me/556184293798?text=Olá!%20Tenho%20uma%20dúvida%20sobre%20um%20pedido%20na%20Beatriz%20Floricultura%20🌸" target="_blank" class="btn btn--primary">
+                    💬 Ainda tem dúvida? Chama no WhatsApp
+                </a>
             </div>
         </div>
     </section>

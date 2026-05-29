@@ -238,3 +238,21 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 });
+
+// ── Barra de progresso
+const scrollProg = document.getElementById('scroll-progress');
+if (scrollProg) {
+  window.addEventListener('scroll', () => {
+    const s = document.documentElement.scrollTop;
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    scrollProg.style.width = (h > 0 ? (s/h)*100 : 0) + '%';
+  }, { passive: true });
+}
+
+// ── FAQ Flores
+function toggleFf(id) {
+  const el = document.getElementById(id);
+  const isOpen = el.classList.contains('open');
+  document.querySelectorAll('.faq-flores__item.open').forEach(x => x.classList.remove('open'));
+  if (!isOpen) el.classList.add('open');
+}

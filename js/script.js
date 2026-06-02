@@ -265,52 +265,26 @@ if (stickyMobile) {
   }, { passive: true });
 }
 
-/* ── CARROSSEL HERO ──────────────────────────────── */
+/* ── CARROSSEL HERO (drag-to-scroll) ─────────────── */
 (function () {
-  const track = document.getElementById('heroCarouselTrack');
-  const dotsContainer = document.getElementById('heroCarouselDots');
-  const prevBtn = document.getElementById('heroPrev');
-  const nextBtn = document.getElementById('heroNext');
-  if (!track) return;
+  const el = document.getElementById('heroCarousel');
+  if (!el) return;
+  let isDown = false, startX, scrollLeft;
 
-  const imgs = track.querySelectorAll('img');
-  const total = imgs.length;
-  const visible = window.innerWidth <= 768 ? 1 : 2;
-  const steps = Math.ceil(total / visible);
-  let current = 0;
-  let paused = false;
-
-  for (let i = 0; i < steps; i++) {
-    const dot = document.createElement('span');
-    if (i === 0) dot.classList.add('active');
-    dot.addEventListener('click', () => goTo(i));
-    dotsContainer.appendChild(dot);
-  }
-
-  function goTo(n) {
-    current = (n + steps) % steps;
-    const itemWidth = imgs[0].offsetWidth + 16;
-    track.style.transform = `translateX(-${current * visible * itemWidth}px)`;
-    dotsContainer.querySelectorAll('span').forEach((d, i) =>
-      d.classList.toggle('active', i === current)
-    );
-  }
-
-  setInterval(() => { if (!paused) goTo(current + 1); }, 3500);
-
-  prevBtn.addEventListener('click', () => goTo(current - 1));
-  nextBtn.addEventListener('click', () => goTo(current + 1));
-
-  const carousel = document.getElementById('heroCarousel');
-  carousel.addEventListener('mouseenter', () => paused = true);
-  carousel.addEventListener('mouseleave', () => paused = false);
-
-  let startX = 0;
-  carousel.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
-  carousel.addEventListener('touchend', e => {
-    const diff = startX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? 1 : -1));
-  }, { passive: true });
+  el.addEventListener('mousedown', e => {
+    isDown = true;
+    el.classList.add('grabbing');
+    startX = e.pageX - el.offsetLeft;
+    scrollLeft = el.scrollLeft;
+  });
+  el.addEventListener('mouseleave', () => { isDown = false; el.classList.remove('grabbing'); });
+  el.addEventListener('mouseup', () => { isDown = false; el.classList.remove('grabbing'); });
+  el.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - el.offsetLeft;
+    el.scrollLeft = scrollLeft - (x - startX) * 1.2;
+  });
 })();
 
 /* ── CARROSSEL NAMORADOS ─────────────────────────── */

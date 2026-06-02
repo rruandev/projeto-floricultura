@@ -979,54 +979,65 @@ img  { max-width: 100%; display: block; }
 .hero-carousel-section {
     width: 100%;
     background: #fff;
+    padding: 40px 0;
+}
+.hero-carousel-section h2 {
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 24px;
 }
 .hero-carousel {
     position: relative;
     width: 100%;
-    height: 480px;
     overflow: hidden;
+    padding: 0 48px;
+    box-sizing: border-box;
 }
 .hero-carousel__track {
     display: flex;
-    height: 100%;
-    width: calc(100% * 17);
+    gap: 16px;
     transition: transform .5s ease;
 }
 .hero-carousel__track img {
     flex-shrink: 0;
-    width: calc(100% / 17);
-    height: 100%;
+    width: calc(50% - 8px);
+    height: 340px;
     object-fit: cover;
+    border-radius: 16px;
 }
 .hero-carousel__btn {
     position: absolute;
     top: 50%; transform: translateY(-50%);
-    background: rgba(255,255,255,.75);
+    background: rgba(255,255,255,.9);
     border: none; border-radius: 50%;
-    width: 42px; height: 42px;
-    font-size: 18px; cursor: pointer;
+    width: 40px; height: 40px;
+    font-size: 16px; cursor: pointer;
     z-index: 3;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
     transition: background .2s;
 }
 .hero-carousel__btn:hover { background: #fff; }
-.hero-carousel__btn--prev { left: 14px; }
-.hero-carousel__btn--next { right: 14px; }
+.hero-carousel__btn--prev { left: 4px; }
+.hero-carousel__btn--next { right: 4px; }
 .hero-carousel__dots {
-    position: absolute;
-    bottom: 12px; left: 50%;
-    transform: translateX(-50%);
-    display: flex; gap: 6px; z-index: 3;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 16px;
 }
 .hero-carousel__dots span {
     width: 7px; height: 7px;
     border-radius: 50%;
-    background: rgba(255,255,255,.55);
+    background: #ddd;
     cursor: pointer;
     transition: background .3s;
 }
-.hero-carousel__dots span.active { background: #fff; }
+.hero-carousel__dots span.active { background: #b5706a; }
 @media (max-width: 768px) {
-    .hero-carousel { height: 260px; }
+    .hero-carousel__track img { width: calc(100% - 0px); height: 220px; }
+    .hero-carousel { padding: 0 36px; }
 }
 
 /* ── CARROSSEL NAMORADOS ─────────────────────────── */

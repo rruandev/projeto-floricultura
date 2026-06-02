@@ -273,11 +273,14 @@ if (stickyMobile) {
   const nextBtn = document.getElementById('heroNext');
   if (!track) return;
 
-  const total = 17;
+  const imgs = track.querySelectorAll('img');
+  const total = imgs.length;
+  const visible = window.innerWidth <= 768 ? 1 : 2;
+  const steps = Math.ceil(total / visible);
   let current = 0;
   let paused = false;
 
-  for (let i = 0; i < total; i++) {
+  for (let i = 0; i < steps; i++) {
     const dot = document.createElement('span');
     if (i === 0) dot.classList.add('active');
     dot.addEventListener('click', () => goTo(i));
@@ -285,8 +288,9 @@ if (stickyMobile) {
   }
 
   function goTo(n) {
-    current = (n + total) % total;
-    track.style.transform = `translateX(-${current * (100 / total)}%)`;
+    current = (n + steps) % steps;
+    const itemWidth = imgs[0].offsetWidth + 16;
+    track.style.transform = `translateX(-${current * visible * itemWidth}px)`;
     dotsContainer.querySelectorAll('span').forEach((d, i) =>
       d.classList.toggle('active', i === current)
     );

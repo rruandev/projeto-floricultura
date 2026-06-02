@@ -974,3 +974,39 @@ img  { max-width: 100%; display: block; }
   transition: background .2s;
 }
 .sticky-mobile__btn:hover { background: #b5706a; }
+
+/* ── CARROSSEL NAMORADOS ─────────────────────────── */
+.namorados-carousel {
+    position: relative;
+    width: 100%; height: 100%;
+    overflow: hidden;
+}
+.namorados-carousel__track {
+    display: flex;
+    height: 100%;
+    transition: transform .5s ease;
+}
+.namorados-carousel__track img {
+    flex-shrink: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform .6s var(--ease);
+}
+.ocasiao-card:hover .namorados-carousel__track img { transform: scale(1.08); }
+.namorados-carousel__dots {
+    position: absolute;
+    bottom: 10px; left: 50%;
+    transform: translateX(-50%);
+    display: flex; gap: 6px;
+    z-index: 3;
+}
+.namorados-carousel__dots span {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.5);
+    cursor: pointer;
+    transition: background .3s;
+}
+.namorados-carousel__dots span.active {
+    background: #fff;
+}

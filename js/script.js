@@ -264,3 +264,46 @@ if (stickyMobile) {
     stickyMobile.classList.toggle('show', window.scrollY > 500);
   }, { passive: true });
 }
+
+/* ── CARROSSEL NAMORADOS ─────────────────────────── */
+(function () {
+  const track = document.getElementById('namoradosTrack');
+  const dotsContainer = document.getElementById('namoradosDots');
+  if (!track) return;
+
+  const imgs = track.querySelectorAll('img');
+  const total = imgs.length;
+  let current = 0;
+  let paused = false;
+
+  // cria dots
+  imgs.forEach((_, i) => {
+    const dot = document.createElement('span');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goTo(i));
+    dotsContainer.appendChild(dot);
+  });
+
+  function goTo(n) {
+    current = (n + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dotsContainer.querySelectorAll('span').forEach((d, i) =>
+      d.classList.toggle('active', i === current)
+    );
+  }
+
+  const interval = setInterval(() => { if (!paused) goTo(current + 1); }, 3500);
+
+  // pausa no hover (desktop)
+  const carousel = document.getElementById('namoradosCarousel');
+  carousel.addEventListener('mouseenter', () => paused = true);
+  carousel.addEventListener('mouseleave', () => paused = false);
+
+  // swipe no mobile
+  let startX = 0;
+  carousel.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  carousel.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? 1 : -1));
+  }, { passive: true });
+})();

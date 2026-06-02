@@ -991,19 +991,18 @@ img  { max-width: 100%; display: block; }
 }
 .hero-carousel {
     width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    cursor: grab;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    overflow: hidden;
 }
-.hero-carousel::-webkit-scrollbar { display: none; }
-.hero-carousel.grabbing { cursor: grabbing; }
 .hero-carousel__track {
     display: flex;
     gap: 14px;
-    padding: 0 24px 12px;
     width: max-content;
+    animation: heroScroll 35s linear infinite;
+}
+.hero-carousel__track:hover { animation-play-state: paused; }
+@keyframes heroScroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 .hero-carousel__track img {
     flex-shrink: 0;

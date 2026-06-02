@@ -265,27 +265,6 @@ if (stickyMobile) {
   }, { passive: true });
 }
 
-/* ── CARROSSEL HERO (drag-to-scroll) ─────────────── */
-(function () {
-  const el = document.getElementById('heroCarousel');
-  if (!el) return;
-  let isDown = false, startX, scrollLeft;
-
-  el.addEventListener('mousedown', e => {
-    isDown = true;
-    el.classList.add('grabbing');
-    startX = e.pageX - el.offsetLeft;
-    scrollLeft = el.scrollLeft;
-  });
-  el.addEventListener('mouseleave', () => { isDown = false; el.classList.remove('grabbing'); });
-  el.addEventListener('mouseup', () => { isDown = false; el.classList.remove('grabbing'); });
-  el.addEventListener('mousemove', e => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - el.offsetLeft;
-    el.scrollLeft = scrollLeft - (x - startX) * 1.2;
-  });
-})();
 
 /* ── CARROSSEL NAMORADOS ─────────────────────────── */
 (function () {

@@ -975,6 +975,60 @@ img  { max-width: 100%; display: block; }
 }
 .sticky-mobile__btn:hover { background: #b5706a; }
 
+/* ── CARROSSEL HERO ──────────────────────────────── */
+.hero-carousel-section {
+    width: 100%;
+    background: #fff;
+}
+.hero-carousel {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+}
+.hero-carousel__track {
+    display: flex;
+    height: 100%;
+    width: calc(100% * 17);
+    transition: transform .5s ease;
+}
+.hero-carousel__track img {
+    flex-shrink: 0;
+    width: calc(100% / 17);
+    height: 100%;
+    object-fit: cover;
+}
+.hero-carousel__btn {
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    background: rgba(255,255,255,.75);
+    border: none; border-radius: 50%;
+    width: 42px; height: 42px;
+    font-size: 18px; cursor: pointer;
+    z-index: 3;
+    transition: background .2s;
+}
+.hero-carousel__btn:hover { background: #fff; }
+.hero-carousel__btn--prev { left: 14px; }
+.hero-carousel__btn--next { right: 14px; }
+.hero-carousel__dots {
+    position: absolute;
+    bottom: 12px; left: 50%;
+    transform: translateX(-50%);
+    display: flex; gap: 6px; z-index: 3;
+}
+.hero-carousel__dots span {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.55);
+    cursor: pointer;
+    transition: background .3s;
+}
+.hero-carousel__dots span.active { background: #fff; }
+@media (max-width: 768px) {
+    .hero-carousel { height: 260px; }
+}
+
 /* ── CARROSSEL NAMORADOS ─────────────────────────── */
 .namorados-carousel {
     position: relative;

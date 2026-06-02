@@ -265,6 +265,50 @@ if (stickyMobile) {
   }, { passive: true });
 }
 
+/* ── CARROSSEL HERO ──────────────────────────────── */
+(function () {
+  const track = document.getElementById('heroCarouselTrack');
+  const dotsContainer = document.getElementById('heroCarouselDots');
+  const prevBtn = document.getElementById('heroPrev');
+  const nextBtn = document.getElementById('heroNext');
+  if (!track) return;
+
+  const total = 17;
+  let current = 0;
+  let paused = false;
+
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('span');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goTo(i));
+    dotsContainer.appendChild(dot);
+  }
+
+  function goTo(n) {
+    current = (n + total) % total;
+    track.style.transform = `translateX(-${current * (100 / total)}%)`;
+    dotsContainer.querySelectorAll('span').forEach((d, i) =>
+      d.classList.toggle('active', i === current)
+    );
+  }
+
+  setInterval(() => { if (!paused) goTo(current + 1); }, 3500);
+
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+
+  const carousel = document.getElementById('heroCarousel');
+  carousel.addEventListener('mouseenter', () => paused = true);
+  carousel.addEventListener('mouseleave', () => paused = false);
+
+  let startX = 0;
+  carousel.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  carousel.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? 1 : -1));
+  }, { passive: true });
+})();
+
 /* ── CARROSSEL NAMORADOS ─────────────────────────── */
 (function () {
   const track = document.getElementById('namoradosTrack');

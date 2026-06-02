@@ -984,11 +984,13 @@ img  { max-width: 100%; display: block; }
 .namorados-carousel__track {
     display: flex;
     height: 100%;
+    width: 1700%; /* 17 fotos */
     transition: transform .5s ease;
 }
 .namorados-carousel__track img {
     flex-shrink: 0;
-    width: 100%; height: 100%;
+    width: calc(100% / 17);
+    height: 100%;
     object-fit: cover;
     transition: transform .6s var(--ease);
 }

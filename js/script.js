@@ -286,7 +286,7 @@ if (stickyMobile) {
 
   function goTo(n) {
     current = (n + total) % total;
-    track.style.transform = `translateX(-${current * 100}%)`;
+    track.style.transform = `translateX(-${current * (100 / 17)}%)`;
     dotsContainer.querySelectorAll('span').forEach((d, i) =>
       d.classList.toggle('active', i === current)
     );
